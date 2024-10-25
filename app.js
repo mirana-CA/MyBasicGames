@@ -7,8 +7,10 @@ let yourChoice = document.querySelector(".yourChoice")
 let compChoice = document.querySelector(".compChoice")
 let result = document.querySelector(".result")
 let choices = document.querySelector(".choices")
+let clickText = document.querySelector(".click_text")
 let yourPointValue = 0
 let compPointValue = 0
+
 
 function handlePoints() {
     yourPoint.innerHTML = `${yourPointValue}`
@@ -28,6 +30,7 @@ function itIsTie() {
     result.style.backgroundColor = "lightblue"
     result.style.display = "block"
     choices.style.display = "block"
+    clickText.style.display = "none"
     handlePoints() 
 }
 function youWin() {
@@ -36,6 +39,7 @@ function youWin() {
     result.style.backgroundColor = "lightgreen"
     result.style.display = "block"
     choices.style.display = "block"
+    clickText.style.display = "none"
     yourPointValue++
     handlePoints() 
 }
@@ -45,6 +49,7 @@ function youLose() {
     result.style.backgroundColor = "lightsalmon"
     result.style.display = "block"
     choices.style.display = "block"
+    clickText.style.display = "none"
     compPointValue++
     handlePoints() 
 }

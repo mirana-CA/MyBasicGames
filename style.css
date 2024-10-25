@@ -22,6 +22,7 @@ section .container{
     margin: 0 auto;
     height: 70vh;
     padding: 40px 20px;
+    box-shadow: rgb(38, 57, 77) 0px 10px 30px -10px;
 }
 .game_score{
     float:right;
@@ -50,6 +51,11 @@ section .container{
 .buttons button:hover{
    transform: scale(1.2);
    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.click_text{
+    text-align: center;
+    font-size: 50px;
+    letter-spacing: 2px;
 }
 .choices{
     display: none;
