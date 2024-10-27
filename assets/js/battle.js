@@ -25,6 +25,9 @@ theCharacters.forEach((character) => {
     chooseYourCharacter.style.display = "none";
     console.log(userCharacter);
     battleUserCharacter.src = userCharacter;
+    alert(`yungul zerbede 10 can itir ehtimali 50%dir
+orta zerbede 20 can itir ehtimali 33%dir
+agir zerbede 30 can itir ehtimali 20%dir`);
   });
 });
 
