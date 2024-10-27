@@ -14,6 +14,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 80px;
+  padding: 0 20px;
   margin: 0 auto;
 }
 
@@ -25,6 +26,9 @@
   cursor: pointer;
   transition-duration: 200ms;
   animation: boxAnimation 2000ms infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .characterBox:hover {
   box-shadow: 0px 5px 30px red;
@@ -44,7 +48,40 @@
   max-width: 100%;
   object-fit: cover;
   height: 450px;
+  margin: 0 auto;
 }
+@media only screen and (max-width: 1200px) {
+  .characterBoxContainer {
+    max-width: 1000px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .characterBox img {
+    height: 400px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .characterBoxContainer {
+    max-width: 600px;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .characterBox img {
+    height: 300px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .characterBoxContainer {
+    max-width: 300px;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .characterBox img {
+    height: 300px;
+  }
+}
+
+/* BATTLE */
 #battleSection {
   background-image: url("https://i.pinimg.com/originals/36/43/2e/36432efea95d385a3495f56b434daa96.gif");
   background-position: center;
@@ -52,6 +89,7 @@
   background-size: cover;
   min-height: 100vh;
   width: 100%;
+  display: none;
 }
 .battleCharacters {
   display: flex;
@@ -179,5 +217,48 @@
 
   to {
     transform: rotate(360deg);
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .battleBoxes img {
+    height: 300px;
+  }
+  .battleCharacters {
+    padding: 0 20px;
+  }
+  .battleButtons button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+  }
+  @keyframes characterAnimation {
+    0% {
+      transform: translate(0px);
+    }
+    50% {
+      transform: translate(10px);
+    }
+    100% {
+      transform: translate(0px);
+    }
+  }
+}
+@media only screen and (max-width: 700px) {
+  .battleButtons {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media only screen and (max-width: 700px) {
+  .battleBoxes img {
+    height: 200px;
+    width: 120px;
+  }
+  .battleCharacters {
+    padding: 0 10px;
   }
 }

@@ -1,4 +1,5 @@
 let chooseYourCharacter = document.getElementById("chooseYourCharacter");
+let battleSection = document.getElementById("battleSection");
 let theCharacters = document.querySelectorAll(".theCharacter");
 let battleUserCharacter = document.querySelector(".battleUserCharacter");
 let pcCharacter = document.querySelector(".pcCharacter");
@@ -23,6 +24,7 @@ theCharacters.forEach((character) => {
   character.addEventListener("click", () => {
     let userCharacter = character.getAttribute("src");
     chooseYourCharacter.style.display = "none";
+    battleSection.style.display = "block";
     console.log(userCharacter);
     battleUserCharacter.src = userCharacter;
     alert(`yungul zerbede 10 can itir ehtimali 50%dir
