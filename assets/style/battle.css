@@ -1,0 +1,183 @@
+#chooseYourCharacter {
+  background-color: lightcoral;
+  min-height: 100vh;
+}
+#chooseYourCharacter h1 {
+  text-align: center;
+  padding: 50px 0;
+  color: #fff;
+  text-shadow: 1px 1px 5px red;
+  font-size: 40px;
+}
+.characterBoxContainer {
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 80px;
+  margin: 0 auto;
+}
+
+.characterBox {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px red;
+  cursor: pointer;
+  transition-duration: 200ms;
+  animation: boxAnimation 2000ms infinite;
+}
+.characterBox:hover {
+  box-shadow: 0px 5px 30px red;
+}
+@keyframes boxAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.characterBox img {
+  max-width: 100%;
+  object-fit: cover;
+  height: 450px;
+}
+#battleSection {
+  background-image: url("https://i.pinimg.com/originals/36/43/2e/36432efea95d385a3495f56b434daa96.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100%;
+}
+.battleCharacters {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 0 100px;
+}
+.battleBoxes img {
+  height: 500px;
+  filter: drop-shadow(5px 5px 5px black);
+  animation: characterAnimation 1000ms infinite;
+}
+@keyframes characterAnimation {
+  0% {
+    transform: translate(0px);
+  }
+  50% {
+    transform: translate(50px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
+.battleBoxes .details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  color: #fff;
+  font-size: 24px;
+  gap: 10px;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 3px red;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.battleBoxes .details .userPoint,
+.battleBoxes .details .pcPoint {
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 20px;
+  background-color: green;
+  color: black;
+  text-shadow: none;
+}
+.battleButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 0 auto;
+}
+.battleButtons button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: none;
+  margin-bottom: 50px;
+  box-shadow: 5px 5px 15px black;
+  cursor: pointer;
+  transition-duration: 200ms;
+}
+.battleButtons button:hover {
+  transform: scale(1.1);
+}
+.battleButtons button img {
+  max-width: 100%;
+}
+.battleButtons .lowPunch {
+  background-color: yellow;
+}
+.battleButtons .normalPunch {
+  background-color: green;
+}
+
+.battleButtons .highPunch {
+  background-color: red;
+}
+.winMessage {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: green;
+  text-shadow: 0px 5px 4px black;
+  font-size: 60px;
+  z-index: 3;
+  font-weight: bold;
+  opacity: 0;
+  transition-duration: 500ms;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.loseMessage {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: red;
+  text-shadow: 0px 5px 4px black;
+  font-size: 60px;
+  z-index: 3;
+  font-weight: bold;
+  opacity: 0;
+  transition-duration: 500ms;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.playAgain {
+  animation: playAgainAnimation 2000ms infinite;
+  cursor: pointer;
+}
+@keyframes playAgainAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

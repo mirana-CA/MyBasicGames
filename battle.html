@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Handlee&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Press+Start+2P&family=Silkscreen:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="assets/style/reset.css" />
+    <link rel="stylesheet" href="assets/style/battle.css" />
+    <link
+      rel="shortcut icon"
+      href="https://cdn-icons-png.flaticon.com/512/10339/10339556.png"
+      type="image/x-icon"
+    />
+    <title>Battle</title>
+  </head>
+  <body>
+    <section id="chooseYourCharacter">
+      <h1>CHOOSE YOUR CHARACTER</h1>
+      <div class="characterBoxContainer">
+        <div class="characterBox">
+          <img
+            class="theCharacter"
+            src="https://file.aiquickdraw.com/imgcompressed/img/compressed_5cc00f2798f470383af0d17eef482ea6.webp"
+            alt=""
+          />
+        </div>
+        <div class="characterBox">
+          <img
+            class="theCharacter"
+            src="https://www.picng.com/upload/anime_girl/png_anime_girl_40862.png"
+            alt=""
+          />
+        </div>
+        <div class="characterBox">
+          <img
+            class="theCharacter"
+            src="https://www.picng.com/upload/anime_girl/png_anime_girl_40846.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+    <section id="battleSection">
+      <div class="battleCharacters">
+        <div class="battleBoxes">
+          <div class="details">
+            <div class="userNick"></div>
+            <div class="userPoint"></div>
+          </div>
+          <img class="battleUserCharacter" />
+        </div>
+        <div class="battleButtons">
+          <button class="lowPunch">
+            <img
+              src="https://img.pikbest.com/origin/09/21/61/35VpIkbEsTDfn.png!sw800"
+              alt=""
+            />
+          </button>
+          <button class="normalPunch">
+            <img
+              src="https://img.pikbest.com/origin/09/21/61/35VpIkbEsTDfn.png!sw800"
+              alt=""
+            />
+          </button>
+          <button class="highPunch">
+            <img
+              src="https://img.pikbest.com/origin/09/21/61/35VpIkbEsTDfn.png!sw800"
+              alt=""
+            />
+          </button>
+        </div>
+        <div class="battleBoxes">
+          <div class="details">
+            <div class="userNick">PC</div>
+            <div class="pcPoint"></div>
+          </div>
+          <img
+            class="pcCharacter"
+            src="https://cdn.myskins.gg/apex-legends/images/apex-legends_glistened_pathfinder_front.png"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="winMessage">
+        VICTORY <i class="fa-solid fa-arrow-rotate-right playAgain"></i>
+      </div>
+      <div class="loseMessage">
+        DEFEAT <i class="fa-solid fa-arrow-rotate-right playAgain"></i>
+      </div>
+    </section>
+
+    <script src="assets/js/battle.js"></script>
+  </body>
+</html>

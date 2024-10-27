@@ -27,7 +27,7 @@ function compChooses() {
 }
 
 function itIsTie() {
-  result.innerHTML = "NO ONE WIN";
+  result.innerHTML = "NO ONE WINS";
   result.style.color = "blue";
   result.style.backgroundColor = "lightblue";
   result.style.display = "block";

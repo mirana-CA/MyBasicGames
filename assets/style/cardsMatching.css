@@ -35,6 +35,7 @@
   transition-duration: 200ms;
   perspective: 1000px;
   position: relative;
+  min-height: 400px;
 }
 .card:hover {
   transform: scale(1.03);
@@ -44,6 +45,7 @@
   max-width: 100%;
   object-fit: cover;
 }
+
 .cardCover {
   position: absolute;
   transform: rotateY(0deg);
@@ -88,7 +90,7 @@
 
 @media only screen and (max-width: 1200px) {
   .cards {
-    max-width: auto;
+    max-width: 900px;
   }
   .card {
     min-height: 300px;
