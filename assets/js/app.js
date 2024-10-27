@@ -8,6 +8,7 @@ let exit = document.querySelector(".exit");
 const savedNickname = localStorage.getItem("nickname");
 if (savedNickname) {
   meetUser.style.display = "none";
+  games.style.display = "block";
   user_nickname.innerHTML = `${savedNickname}!`;
 }
 

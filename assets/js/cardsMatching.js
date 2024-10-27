@@ -2,42 +2,34 @@ let cardsElem = [
   {
     id: 1,
     src: "",
-    opened: false,
   },
   {
     id: 2,
     src: "",
-    opened: false,
   },
   {
     id: 3,
     src: "",
-    opened: false,
   },
   {
     id: 4,
     src: "",
-    opened: false,
   },
   {
     id: 5,
     src: "",
-    opened: false,
   },
   {
     id: 6,
     src: "",
-    opened: false,
   },
   {
     id: 7,
     src: "",
-    opened: false,
   },
   {
     id: 8,
     src: "",
-    opened: false,
   },
 ];
 let watermelon =
@@ -70,27 +62,65 @@ fruits.forEach((fruit) => {
     cardsElem[index].src = fruit;
   }
 });
-
+let firstCard = null;
+let matchedCards = 0;
+let clickedCount = document.querySelector(".clickedCount");
+let clickedCountValue = 0;
+clickedCount.innerHTML = clickedCountValue;
+let winMessage = document.querySelector(".winMessage");
 cardsElem.forEach((card) => {
   cards.innerHTML += `
-        <div class="card">
-            <img class="mainCard" src="${card.src}" alt="card" />
-            <img
-              class="cardCover"
-              src="https://img.freepik.com/premium-vector/question-mark-sign-with-round-button-pink-ask-help_300191-1567.jpg"
-              alt="cover"
-            />
-          </div>
-   `;
-  let myCard = document.querySelectorAll(".card");
-  myCard.forEach((c, index) => {
-    c.addEventListener("click", () => {
-      let mainCard = c.querySelector(".mainCard");
-      let cardCover = c.querySelector(".cardCover");
-      cardCover.style.transform = " rotateY(180deg)";
-      mainCard.style.transform = " rotateY(0deg)";
-      card.opened = true;
+    <div class="card">
+      <img class="mainCard" src="${card.src}" alt="card" />
+      <img
+        class="cardCover"
+        src="https://img.freepik.com/premium-vector/question-mark-sign-with-round-button-pink-ask-help_300191-1567.jpg"
+        alt="cover"
+      />
+    </div>
+  `;
+});
+
+let myCard = document.querySelectorAll(".card");
+myCard.forEach((c) => {
+  c.addEventListener("click", () => {
+    if (c.classList.contains("matched")) {
+      return;
+    }
+    let mainCard = c.querySelector(".mainCard");
+    let cardCover = c.querySelector(".cardCover");
+    clickedCountValue++;
+    clickedCount.innerHTML = clickedCountValue;
+    if (!firstCard) {
+      firstCard = c;
       openedCardsCount++;
-    });
+
+      cardCover.style.transform = "rotateY(180deg)";
+      mainCard.style.transform = "rotateY(0deg)";
+    } else if (firstCard !== c) {
+      cardCover.style.transform = "rotateY(180deg)";
+      mainCard.style.transform = "rotateY(0deg)";
+
+      setTimeout(() => {
+        if (firstCard.querySelector(".mainCard").src === mainCard.src) {
+          c.style.boxShadow = "0px 5px 15px yellowgreen";
+          firstCard.style.boxShadow = "0px 5px 15px yellowgreen";
+          firstCard.classList.add("matched");
+          c.classList.add("matched");
+          matchedCards += 2;
+          if (matchedCards == 8) {
+            winMessage.style.opacity = "1";
+          }
+        } else {
+          firstCard.querySelector(".cardCover").style.transform =
+            "rotateY(0deg)";
+          firstCard.querySelector(".mainCard").style.transform =
+            "rotateY(180deg)";
+          cardCover.style.transform = "rotateY(0deg)";
+          mainCard.style.transform = "rotateY(180deg)";
+        }
+        firstCard = null;
+      }, 500);
+    }
   });
 });
