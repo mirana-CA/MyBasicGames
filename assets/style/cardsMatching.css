@@ -39,9 +39,7 @@
 .card:hover {
   transform: scale(1.03);
 }
-.card {
-  min-height: 400px;
-}
+
 .card img {
   max-width: 100%;
   object-fit: cover;
@@ -90,14 +88,15 @@
 
 @media only screen and (max-width: 1200px) {
   .cards {
-    max-width: 900px;
-    grid-template-columns: 1fr 1fr 1fr;
+    max-width: auto;
+  }
+  .card {
+    min-height: 300px;
   }
 }
 @media only screen and (max-width: 800px) {
   .cards {
-    max-width: 600px;
-    grid-template-columns: 1fr 1fr;
+    gap: 30px;
   }
   #cardsMatching h1 {
     padding: 50px 0 100px;
@@ -110,8 +109,11 @@
 }
 @media only screen and (max-width: 600px) {
   .cards {
-    max-width: 300px;
-    grid-template-columns: 1fr;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .card {
+    min-height: 300px;
   }
   #cardsMatching h1 {
     font-size: 30px;
@@ -124,5 +126,11 @@
   }
   .winMessage {
     font-size: 30px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .card {
+    min-height: 150px;
+    height: 150px;
   }
 }
