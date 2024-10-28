@@ -1,0 +1,30 @@
+#todolist{
+    background-color: lightcoral;
+    min-height: 100vh;
+}
+.todolistContainer{
+    width: 300px;
+    margin:  0 auto;
+}
+ul{
+    width: 70%;
+    flex-direction: column;
+    margin-left: -30px;
+}
+li{
+    display: flex;
+    
+    justify-content: space-between;
+    text-decoration: none;
+}
+li p {
+    font-size: 20px;
+    cursor: pointer;
+}
+.delete{
+    background-color: #fff;
+    color: red;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
