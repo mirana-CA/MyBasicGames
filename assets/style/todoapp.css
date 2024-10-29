@@ -1,30 +1,91 @@
-#todolist{
-    background-color: lightcoral;
-    min-height: 100vh;
+#todolist {
+  background-color: lightcoral;
+  min-height: 100vh;
 }
-.todolistContainer{
-    width: 300px;
-    margin:  0 auto;
+#todolist h1 {
+  text-align: center;
+  padding: 50px 0;
+  color: #fff;
+  text-shadow: 1px 1px 3px black;
 }
-ul{
-    width: 70%;
-    flex-direction: column;
-    margin-left: -30px;
+.todolistContainer {
+  width: 600px;
+  margin: 0 auto;
 }
-li{
-    display: flex;
-    
-    justify-content: space-between;
-    text-decoration: none;
+ul {
+  width: 500px;
+  flex-direction: column;
+  padding-top: 20px;
+  /* margin-left: -30px; */
+}
+li {
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  background-color: #fff;
+  padding: 10px 10px 10px 0;
+  margin: 10px 0;
+  border-radius: 2px;
 }
 li p {
-    font-size: 20px;
-    cursor: pointer;
+  font-size: 20px;
+  cursor: pointer;
+  color: black;
 }
-.delete{
-    background-color: #fff;
-    color: red;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
+.activeLine {
+  text-decoration: line-through;
+}
+.deleteBtn {
+  background-color: #fff;
+  color: crimson;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+.editBtn {
+  color: lightblue;
+  background-color: #fff;
+  padding-left: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+}
+.addBtn {
+  padding: 15px 25px;
+  margin-left: 20px;
+  background-color: rgb(83, 161, 186);
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.sortBtn {
+  padding: 15px 25px;
+  margin-left: 20px;
+  background-color: rgb(152, 181, 124);
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+input {
+  width: 400px;
+  padding: 15px;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+}
+.searchInput {
+  position: absolute;
+  top: 100px;
+  right: 20px;
+  width: 200px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.listId {
+  background-color: #eeebeb;
+  padding: 10px;
 }

@@ -1,64 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Handlee&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Press+Start+2P&family=Silkscreen:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Silkscreen:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Handlee&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Press+Start+2P&family=Silkscreen:wght@400;700&display=swap"
-    rel="stylesheet" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Silkscreen:wght@400;700&display=swap"
-    rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="assets/style/reset.css" />
+    <link rel="stylesheet" href="assets/style/home.css" />
+    <link
+      rel="shortcut icon"
+      href="https://cdn-icons-png.flaticon.com/512/10339/10339556.png"
+      type="image/x-icon"
+    />
+    <title>My Basic Games</title>
+  </head>
 
-  <link rel="stylesheet" href="assets/style/reset.css" />
-  <link rel="stylesheet" href="assets/style/home.css" />
-  <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/10339/10339556.png" type="image/x-icon" />
-  <title>My Basic Games</title>
-</head>
+  <body>
+    <section id="meet_user">
+      <h1>Welcome !</h1>
+      <form>
+        <label for="name">Please Enter a Nickname</label>
+        <input class="nickInput" type="text" id="name" required />
 
-<body>
-  <section id="meet_user">
-    <h1>Welcome !</h1>
-    <form>
-      <label for="name">Please Enter a Nickname</label>
-      <input class="nickInput" type="text" id="name" required />
+        <button class="submitBtn">Submit</button>
+      </form>
+    </section>
+    <section id="games">
+      <a href="index.html"
+        ><i class="fa-solid fa-arrow-right-from-bracket exit"></i
+      ></a>
+      <h1>Hi <span class="user_nickname"></span></h1>
+      <div class="games_container">
+        <a href="rockpaperscissors.html" class="game_box">
+          <img src="assets/imgs/rock-paper-scissors-icons.jpg" alt="" />
+          <h2>Rock Paper Scissors</h2>
+        </a>
+        <a href="numberGuessing.html" class="game_box">
+          <img src="assets/imgs/numbers.png" alt="" />
+          <h2>Find Number</h2>
+        </a>
+        <a href="cardsMatching.html" class="game_box">
+          <img src="assets/imgs/cards.png" alt="" />
+          <h2>Match Cards</h2>
+        </a>
+        <a href="battle.html" class="game_box">
+          <img src="assets/imgs/battle-icon.png" alt="" />
+          <h2>Battle</h2>
+        </a>
+        <a href="todoapp.html" class="game_box">
+          <img src="assets/imgs/to-do-list-icon.webp" alt="" />
+          <h2>To Do List</h2>
+        </a>
+      </div>
+    </section>
 
-      <button class="submitBtn">Submit</button>
-    </form>
-  </section>
-  <section id="games">
-    <a href="index.html"><i class="fa-solid fa-arrow-right-from-bracket exit"></i></a>
-    <h1>Hi <span class="user_nickname"></span></h1>
-    <div class="games_container">
-      <a href="rockpaperscissors.html" class="game_box">
-        <img src="assets/imgs/rock-paper-scissors-icons.jpg" alt="" />
-        <h2>Rock Paper Scissors</h2>
-      </a>
-      <a class="game_box">
-        <img src="assets/imgs/numbers.png" alt="" />
-        <h2>Find Number</h2>
-      </a>
-      <a href="cardsMatching.html" class="game_box">
-        <img src="assets/imgs/cards.png" alt="" />
-        <h2>Match Cards</h2>
-      </a>
-      <a href="battle.html" class="game_box">
-        <img src="assets/imgs/battle-icon.png" alt="" />
-        <h2>Battle</h2>
-      </a>
-      <a href="todoapp.html" class="game_box">
-        <img src="assets/imgs/to-do-list-icon.webp" alt="" />
-        <h2>To Do List</h2>
-      </a>
-    </div>
-  </section>
-
-  <script src="assets/js/app.js"></script>
-</body>
-
+    <script src="assets/js/app.js"></script>
+  </body>
 </html>

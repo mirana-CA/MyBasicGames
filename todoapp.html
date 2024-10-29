@@ -1,37 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Handlee&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Press+Start+2P&family=Silkscreen:wght@400;700&display=swap"
-        rel="stylesheet" />
+      href="https://fonts.googleapis.com/css2?family=Handlee&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Press+Start+2P&family=Silkscreen:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
 
     <link rel="stylesheet" href="assets/style/reset.css" />
     <link rel="stylesheet" href="assets/style/todoapp.css" />
-    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/10339/10339556.png" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="https://cdn-icons-png.flaticon.com/512/10339/10339556.png"
+      type="image/x-icon"
+    />
     <title>TO DO LIST</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <section id="todolist">
-        <h1>TO DO LIST</h1>
-        <div class="todolistContainer">
-            <form>
-                <input type="text">
-                <button></button>
-            </form>
-            <ul></ul>
-        </div>
+      <h1>TO DO LIST</h1>
+      <div class="todolistContainer">
+        <form>
+          <input
+            class="itemInput"
+            type="text"
+            placeholder="Add Item"
+            required
+          />
+          <button class="addBtn">Add</button>
+          <button class="sortBtn">Sort</button>
+          <input class="searchInput" type="text" placeholder="Search" />
+        </form>
+        <ul></ul>
+      </div>
     </section>
 
-
     <script src="assets/js/todoapp.js"></script>
-</body>
-
+  </body>
 </html>
