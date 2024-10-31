@@ -14,7 +14,9 @@ addBtn.addEventListener("click", function (e) {
   }
 });
 sortBtn.addEventListener("click", function () {
+  createElem();
   sorting();
+  editItem();
   addLine();
   deleteItem();
 });
