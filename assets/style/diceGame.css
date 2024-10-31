@@ -7,20 +7,44 @@ section{
     background-color: lightcoral;
     height: 100vh;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .container{
     max-width: 1200px;
     margin: 0 auto;
-    margin-bottom: 80px;
     border-radius: 10px;
     padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+   
 }
 .diceGame-rs{
-    background-color: lightpink;
-}.diceGame-ls{
-    background-color: palevioletred;
+    border-radius:  10px  0 0 10px ;
+}
+.diceGame-ls{
+    border-radius: 0 10px 10px 0;
+}
+.sides{
+    background-color: #fff;
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 70vh;
+    padding: 100px 0;
+    text-align: center;
+   
+}
+.sides div h1{
+    font-size: 40px;
+    font-weight: normal;
+}
+.sides div p{
+    font-size: 60px;
+    font-weight: normal;
+    color: brown;
 }
