@@ -1,113 +1,112 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  a,
-  li,
-  ul {
-    text-decoration: none;
-    list-style: none;
-  }
-  button{
-    cursor: pointer;
-  }
-#numberGuessing{
-    min-height: 100vh;
-    background-color: lightcoral;
-    max-width: 100%;
-    font-family: "Silkscreen", sans-serif !important;
-    color: #fff;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.heading{
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    justify-content: space-between;
-    max-width: 1200px;
-margin: 0 auto;
+a,
+li,
+ul {
+  text-decoration: none;
+  list-style: none;
 }
-.heading .playAgain{
-    background-color: #fff;
-    color: #000;
-    padding: 15px 30px ;
-    border: none;
-    font-family: "Silkscreen", sans-serif !important;
+button {
+  cursor: pointer;
+}
+#numberGuessing {
+  min-height: 100vh;
+  background-color: lightcoral;
+  max-width: 100%;
+  font-family: "Silkscreen", sans-serif !important;
+  color: #fff;
+}
+.heading {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.heading .playAgain {
+  background-color: #fff;
+  color: #000;
+  padding: 15px 30px;
+  border: none;
+  font-family: "Silkscreen", sans-serif !important;
 
-    /* font-weight: bold; */
+  /* font-weight: bold; */
 }
-#numberGuessing h1{
-text-align: center;
-font-size: 40px;
-font-weight: normal;
-padding: 40px 0;
+#numberGuessing h1 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: normal;
+  padding: 40px 0;
 }
-.pcNumber{
-    display: flex;
-    align-items: center;
+.pcNumber {
+  display: flex;
+  align-items: center;
 }
-.pcNumber_leftSide{
-    width: 50%;
-    height: 10px;
-    background-color: #fff;
-
+.pcNumber_leftSide {
+  width: 50%;
+  height: 10px;
+  background-color: #fff;
 }
-.pcNumber_rightSide{
-    width: 50%;
-    height: 10px;
-    background-color: #fff;
-
+.pcNumber_rightSide {
+  width: 50%;
+  height: 10px;
+  background-color: #fff;
 }
-.pcMainNumber{
-    padding: 15px 40px;
-    background-color: #fff;
-    color: #000;
-    font-size: 60px;
+.pcMainNumber {
+  padding: 15px 40px;
+  background-color: #fff;
+  color: #000;
+  font-size: 60px;
 }
-.aboutMyNum{
-    padding:100px 0 50px;
-    display: flex;
-    align-items: center;
-    gap: 100px;
-    justify-content: center;
+.aboutMyNum {
+  padding: 100px 0 50px;
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  justify-content: center;
 }
-.aboutMyNum_ls{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
+.aboutMyNum_ls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
 }
-.aboutMyNum_ls button{
-    background-color: #fff;
-    color: #000;
-    padding: 15px 30px ;
-    border: none;
-    font-family: "Silkscreen", sans-serif !important;
-    width: min-content;
-    margin: 0 auto;
+.aboutMyNum_ls button {
+  background-color: #fff;
+  color: #000;
+  padding: 15px 30px;
+  border: none;
+  font-family: "Silkscreen", sans-serif !important;
+  width: min-content;
+  margin: 0 auto;
 }
-.aboutMyNum_ls input{
-    border: 3px solid #fff;
-    font-family: "Silkscreen", sans-serif !important;
-    font-size: 40px;
-    width: 200px;
-    height: 70px;
-    background-color: lightcoral;
-    color: #fff;
-    outline: none;
+.aboutMyNum_ls input {
+  border: 3px solid #fff;
+  font-family: "Silkscreen", sans-serif !important;
+  font-size: 40px;
+  width: 200px;
+  height: 70px;
+  background-color: lightcoral;
+  color: #fff;
+  outline: none;
+  text-align: center;
 }
-.myNumStatus{
-    font-size: 24px;
+.myNumStatus {
+  font-size: 24px;
 }
-.myScore{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding-top: 60px;
+.myScore {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 60px;
 }
-.myHighScore{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding-top: 20px;
+.myHighScore {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 20px;
 }
