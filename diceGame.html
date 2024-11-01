@@ -20,21 +20,35 @@
 
     <section>
         <div class="container">
-            <div class="diceGame-rs sides">
-                <div>
+            <div class="diceGame-ls sides">
+                <div class="side-heading">
                     <h1>PLAYER 1</h1>
                     <p class="player1Point">0</p>
                 </div>
+                <div class="player1Current">
+                    <h5>CURRENT</h5>
+                    <p class="player1CurrentPoint">0</p>
+                </div>
 
-                <div class="player1Current">0</div>
             </div>
-            <div class="diceGame-ls sides">
-                <div>
+            <div class="diceGame-rs sides">
+                <div class="side-heading">
                     <h1>PLAYER 2</h1>
                     <p class="player2Point">0</p>
                 </div>
-                <div class="player2Current">0</div>
+                <div class="player2Current">
+                    <h5>CURRENT</h5>
+                    <p class="player2CurrentPoint">0</p>
+                </div>
             </div>
+            <button class="playAgainBtn">
+                <i class="fa-solid fa-arrow-rotate-right"></i> New Game</button>
+            <button class="rollDiceBtn">
+                <i class="fa-solid fa-dice-d6"></i> Roll Dice</button>
+            <button class="holdBtn">
+                <i class="fa-solid fa-square-plus"></i>
+                Hold </button>
+            <img class="diceImg" src="./assets/imgs/dice-three.png" alt="">
         </div>
     </section>
 

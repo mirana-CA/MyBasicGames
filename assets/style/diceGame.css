@@ -22,13 +22,16 @@ section{
    
 }
 .diceGame-rs{
-    border-radius:  10px  0 0 10px ;
-}
-.diceGame-ls{
+    background-color:  rgb(253, 158, 173);
     border-radius: 0 10px 10px 0;
 }
+.diceGame-ls{
+    
+    border-radius:  10px  0 0 10px ;
+    background-color: lightpink;
+}
 .sides{
-    background-color: #fff;
+
     width: 600px;
     display: flex;
     align-items: center;
@@ -39,12 +42,63 @@ section{
     text-align: center;
    
 }
-.sides div h1{
+.sides .side-heading h1{
     font-size: 40px;
     font-weight: normal;
 }
-.sides div p{
+.sides .side-heading p{
     font-size: 60px;
     font-weight: normal;
-    color: brown;
+    color: lightcoral;
+}
+.player2Current,.player1Current{
+   width: 170px;
+   height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 6px;
+    background-color: lightcoral;
+    border-radius: 5px;
+    color: #fff;
+}
+.player2Current h5,.player1Current h5{
+    font-weight: normal;
+}
+.player2Current p,.player1Current p{
+  font-size: 24px;
+}
+.playAgainBtn,.rollDiceBtn,.holdBtn{
+    background-color: #ffffff80;
+    text-transform: uppercase;
+    padding: 10px 20px ;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.playAgainBtn{
+    top: 20%;
+}
+.rollDiceBtn{
+    top: 65%;
+}
+.holdBtn{
+    top: 70%;
+}
+.playAgainBtn i,.rollDiceBtn i ,.holdBtn i {
+margin-right: 10px;
+
+}
+.diceImg{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
