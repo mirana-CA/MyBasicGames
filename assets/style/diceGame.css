@@ -13,6 +13,7 @@ section {
 }
 .container {
   max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   border-radius: 10px;
   padding: 20px;
@@ -32,7 +33,7 @@ section {
   transition-duration: 200ms;
 }
 .sides {
-  width: 600px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -109,6 +110,7 @@ section {
 }
 .victoryMessagePlayer1,
 .victoryMessagePlayer2 {
+  text-align: center;
   font-size: 60px;
   color: green;
   text-shadow: 1px 1px 3px black;
@@ -121,4 +123,45 @@ section {
   letter-spacing: 10px;
   opacity: 0;
   transition-duration: 500ms;
+}
+@media only screen and (max-width: 1200px) {
+  .victoryMessagePlayer1,
+  .victoryMessagePlayer2 {
+    font-size: 40px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .sides {
+    padding: 20px 0;
+    height: 60vh;
+  }
+  .sides .side-heading h1 {
+    font-size: 24px;
+  }
+  .sides .side-heading p {
+    font-size: 30px;
+  }
+  .playAgainBtn {
+    top: 25%;
+  }
+  .rollDiceBtn {
+    top: 60%;
+  }
+  .holdBtn {
+    top: 68%;
+  }
+
+  .diceImg {
+    top: 45%;
+  }
+  .player2Current,
+  .player1Current {
+    width: 100px;
+    height: 80px;
+    padding: 10px;
+  }
+  .victoryMessagePlayer1,
+  .victoryMessagePlayer2 {
+    font-size: 30px;
+  }
 }
