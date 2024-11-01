@@ -69,7 +69,7 @@ rollDiceBtn.addEventListener("click", function () {
             player1TotalPoint.innerHTML = player1TotalPointValue;
             player1CurrentPointValue = 0;
             player1CurrentPoint.innerHTML = player1CurrentPointValue;
-            if (player1TotalPointValue >= 20) {
+            if (player1TotalPointValue >= 100) {
               finished = true;
               victoryMessagePlayer1.style.opacity = "1";
             } else {
@@ -95,7 +95,7 @@ rollDiceBtn.addEventListener("click", function () {
             player2TotalPoint.innerHTML = player2TotalPointValue;
             player2CurrentPointValue = 0;
             player2CurrentPoint.innerHTML = player2CurrentPointValue;
-            if (player2TotalPointValue >= 20) {
+            if (player2TotalPointValue >= 100) {
               victoryMessagePlayer2.style.opacity = "1";
 
               finished = true;
