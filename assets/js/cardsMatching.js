@@ -32,6 +32,12 @@ let cardsElem = [
     src: "",
   },
 ];
+const clickedAudio = new Audio(
+  "https://assets.mixkit.co/active_storage/sfx/2997/2997-preview.mp3"
+);
+const victoryAuido = new Audio(
+  "https://audio-previews.elements.envatousercontent.com/files/96176748/preview.mp3?response-content-disposition=attachment%3B+filename%3D%22DRKGYPE-victory.mp3%22"
+);
 let watermelon =
   "https://png.pngtree.com/png-vector/20220912/ourmid/pngtree-watermelon-cartoon-fruit-png-image_6172609.png";
 let strawberry =
@@ -84,6 +90,7 @@ cardsElem.forEach((card) => {
 let myCard = document.querySelectorAll(".card");
 myCard.forEach((c) => {
   c.addEventListener("click", () => {
+    clickedAudio.play();
     if (c.classList.contains("matched")) {
       return;
     }
@@ -110,6 +117,7 @@ myCard.forEach((c) => {
           matchedCards += 2;
           if (matchedCards == 8) {
             winMessage.style.opacity = "1";
+            victoryAuido.play();
           }
         } else {
           firstCard.querySelector(".cardCover").style.transform =

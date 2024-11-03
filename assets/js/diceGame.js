@@ -51,10 +51,18 @@ let index = null;
 let src = null;
 let player1 = true;
 let finished = false;
+
+const clickedAudio = new Audio(
+  "https://assets.mixkit.co/active_storage/sfx/2997/2997-preview.mp3"
+);
+const victoryAuido = new Audio(
+  "https://audio-previews.elements.envatousercontent.com/files/96176748/preview.mp3?response-content-disposition=attachment%3B+filename%3D%22DRKGYPE-victory.mp3%22"
+);
 rollDiceBtn.addEventListener("click", function () {
   if (finished) {
     return;
   } else {
+    clickedAudio.play();
     if (player1) {
       index = Math.floor(Math.random() * 6);
       diceImg.src = diceArr[index].src;
@@ -65,6 +73,7 @@ rollDiceBtn.addEventListener("click", function () {
           if (finished) {
             return;
           } else {
+            clickedAudio.play();
             player1TotalPointValue += player1CurrentPointValue;
             player1TotalPoint.innerHTML = player1TotalPointValue;
             player1CurrentPointValue = 0;
@@ -72,6 +81,7 @@ rollDiceBtn.addEventListener("click", function () {
             if (player1TotalPointValue >= 100) {
               finished = true;
               victoryMessagePlayer1.style.opacity = "1";
+              victoryAuido.play();
             } else {
               turnPlayer2();
             }
@@ -91,13 +101,14 @@ rollDiceBtn.addEventListener("click", function () {
           if (finished) {
             return;
           } else {
+            clickedAudio.play();
             player2TotalPointValue += player2CurrentPointValue;
             player2TotalPoint.innerHTML = player2TotalPointValue;
             player2CurrentPointValue = 0;
             player2CurrentPoint.innerHTML = player2CurrentPointValue;
             if (player2TotalPointValue >= 100) {
               victoryMessagePlayer2.style.opacity = "1";
-
+              victoryAuido.play();
               finished = true;
             } else {
               turnPlayer1();
@@ -125,5 +136,6 @@ function turnPlayer1() {
   player2Div.style.backgroundColor = "rgb(253, 158, 173)";
 }
 playAgainBtn.addEventListener("click", function () {
+  clickedAudio.play();
   location.reload();
 });

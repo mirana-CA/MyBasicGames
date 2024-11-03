@@ -98,10 +98,24 @@
   height: 100vh;
   padding: 0 100px;
 }
-.battleBoxes img {
+.pcCharacter {
   height: 500px;
   filter: drop-shadow(5px 5px 5px black);
   animation: characterAnimation 1000ms infinite;
+}
+.battleUserCharacter {
+  height: 500px;
+  filter: drop-shadow(5px 5px 5px black);
+  animation: characterAnimation 1000ms infinite;
+}
+
+@keyframes hitedAnimation {
+  from {
+    filter: drop-shadow(5px 5px 5px black);
+  }
+  to {
+    filter: drop-shadow(10px 10px 50px red);
+  }
 }
 @keyframes characterAnimation {
   0% {

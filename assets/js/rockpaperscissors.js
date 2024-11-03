@@ -11,6 +11,9 @@ let clickText = document.querySelector(".click_text");
 let userNick = document.querySelectorAll(".user_nick");
 let yourPointValue = 0;
 let compPointValue = 0;
+const clickedAudio = new Audio(
+  "https://assets.mixkit.co/active_storage/sfx/2997/2997-preview.mp3"
+);
 const savedNickname = localStorage.getItem("nickname");
 userNick.forEach((e) => (e.innerHTML = `${savedNickname}`));
 
@@ -56,6 +59,7 @@ function youLose() {
   handlePoints();
 }
 rockBtn.addEventListener("click", function () {
+  clickedAudio.play();
   yourChoice.innerHTML = "ROCK";
   compChooses();
   let compChoiceValue = compChooses();
@@ -75,6 +79,7 @@ rockBtn.addEventListener("click", function () {
 });
 
 paperBtn.addEventListener("click", function () {
+  clickedAudio.play();
   yourChoice.innerHTML = "PAPER";
   compChooses();
   let compChoiceValue = compChooses();
@@ -94,6 +99,7 @@ paperBtn.addEventListener("click", function () {
 });
 
 scissorsBtn.addEventListener("click", function () {
+  clickedAudio.play();
   yourChoice.innerHTML = "SCISSORS";
   compChooses();
   let compChoiceValue = compChooses();

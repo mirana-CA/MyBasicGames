@@ -5,6 +5,12 @@ let pcMainNumber = document.querySelector(".pcMainNumber");
 let myScorePoint = document.querySelector(".myScorePoint");
 let myHighScorePoint = document.querySelector(".myHighScorePoint");
 let playAgain = document.querySelector(".playAgain");
+const clickedAudio = new Audio(
+  "https://assets.mixkit.co/active_storage/sfx/2997/2997-preview.mp3"
+);
+const victoryAuido = new Audio(
+  "https://audio-previews.elements.envatousercontent.com/files/96176748/preview.mp3?response-content-disposition=attachment%3B+filename%3D%22DRKGYPE-victory.mp3%22"
+);
 let randomNum = Math.floor(Math.random() * 100);
 console.log(randomNum);
 
@@ -29,6 +35,7 @@ checkBtn.addEventListener("click", function (e) {
   if (finded) {
     return;
   } else {
+    clickedAudio.play();
     if (numberInput.value < randomNum) {
       myNumStatus.innerHTML = "TOO LOW!";
       handleScore();
@@ -37,8 +44,9 @@ checkBtn.addEventListener("click", function (e) {
       handleScore();
     } else {
       myNumStatus.innerHTML = "CORRECT!";
+      victoryAuido.play();
       pcMainNumber.innerHTML = randomNum;
-      handleScore();
+      myScorePoint.innerHTML = score;
       maxScore = localStorage.getItem("highScore") ?? handleMaxScore();
 
       if (maxScore < score) {
@@ -48,5 +56,6 @@ checkBtn.addEventListener("click", function (e) {
   }
 });
 playAgain.addEventListener("click", function () {
+  clickedAudio.play();
   location.reload();
 });
